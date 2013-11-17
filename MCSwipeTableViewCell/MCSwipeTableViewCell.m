@@ -321,11 +321,11 @@ secondStateIconName:(NSString *)secondIconName
     UIColor *color;
     
     // Background Color
-    if (percentage >= _firstTrigger && percentage < _secondTrigger)
+    if (percentage >= 0 && percentage < _secondTrigger)
         color = _firstColor;
     else if (percentage >= _secondTrigger)
         color = _secondColor;
-    else if (percentage < -_firstTrigger && percentage > -_secondTrigger)
+    else if (percentage < 0 && percentage > -_secondTrigger)
         color = _thirdColor;
     else if (percentage <= -_secondTrigger)
         color = _fourthColor;
